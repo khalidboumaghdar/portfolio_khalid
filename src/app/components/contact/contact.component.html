@@ -1,0 +1,40 @@
+<section class="contact-bg" id="contact">
+  <div class="section-label">// let's connect</div>
+  <div class="section-title">Get in <span>Touch</span></div>
+
+  <div class="contact-wrapper">
+    <!-- Info -->
+    <div class="contact-info">
+      <h3>Open to opportunities &amp; collaboration</h3>
+      <p>I'm actively looking for a full-stack developer position or internship. If you have a project in mind or a role that fits, I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a *ngFor="let link of links" [href]="link.href" class="contact-link" target="_blank">
+          <span class="contact-link-icon">{{ link.icon }}</span>
+          {{ link.label }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="contact-form" (submit)="handleSubmit($event)">
+      <div class="form-group">
+        <label class="form-label">YOUR NAME</label>
+        <input type="text" class="form-input" placeholder="John Doe" [(ngModel)]="form.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">EMAIL ADDRESS</label>
+        <input type="email" class="form-input" placeholder="john@example.com" [(ngModel)]="form.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">MESSAGE</label>
+        <textarea class="form-textarea" placeholder="Tell me about your project or opportunity..." [(ngModel)]="form.message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="form-btn" [disabled]="sending">{{ btnText }}</button>
+    </form>
+  </div>
+</section>
+
+<!-- Toast -->
+<div class="form-success-toast" [class.show]="showToast">
+  <span>✓</span><span>Message sent! I'll get back to you soon.</span>
+</div>

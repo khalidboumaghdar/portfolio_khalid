@@ -1,0 +1,144 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(124,92,252,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,92,252,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+:host-context(body.light) .hero-grid {
+  background-image:
+    linear-gradient(rgba(98,68,232,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(98,68,232,0.06) 1px, transparent 1px);
+}
+.hero-glow {
+  position: absolute; width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(124,92,252,0.15) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  animation: pulse 4s ease-in-out infinite;
+}
+.hero-glow2 {
+  position: absolute; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,229,195,0.1) 0%, transparent 70%);
+  bottom: 0; left: 20%;
+  animation: pulse 6s ease-in-out infinite reverse;
+}
+:host-context(body.light) .hero-glow  { background: radial-gradient(circle, rgba(98,68,232,0.12) 0%, transparent 70%); }
+:host-context(body.light) .hero-glow2 { background: radial-gradient(circle, rgba(0,168,143,0.1) 0%, transparent 70%); }
+
+/* Layout: photo RIGHT, content LEFT */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 4rem;
+  width: 100%;
+  position: relative; z-index: 2;
+}
+
+/* Photo */
+.hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  animation: fadeUp 1s 0.5s ease both;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.hero-photo {
+  width: 380px; height: 420px;
+  border-radius: 4px;
+  object-fit: cover; object-position: center top;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 60px rgba(124,92,252,0.25);
+  display: block; vertical-align: bottom; max-width: 100%;
+}
+.hero-photo-badge {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: rgba(0,229,195,0.92);
+  backdrop-filter: blur(6px);
+  color: #0a0a0f;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+:host-context(body.light) .hero-photo-badge { background: rgba(0,168,143,0.92); color:#fff; }
+
+/* Content */
+.hero-content { position: relative; z-index: 2; flex: 1; min-width: 0; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: 'DM Mono', monospace; font-size: 0.75rem;
+  color: var(--accent2); letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  opacity: 0; animation: fadeUp 0.6s 0.2s ease forwards;
+}
+.hero-tag::before {
+  content: ''; display: inline-block; width: 8px; height: 8px;
+  background: var(--accent2); border-radius: 50%; animation: blink 1.5s infinite;
+}
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800; line-height: 1; letter-spacing: -0.03em;
+  opacity: 0; animation: fadeUp 0.8s 0.4s ease forwards;
+}
+.line2 {
+  display: block;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; max-width: 100%;
+}
+.hero-sub {
+  font-size: 1.1rem; color: var(--muted);
+  max-width: 550px; line-height: 1.7; margin-top: 1.5rem;
+  opacity: 0; animation: fadeUp 0.8s 0.6s ease forwards;
+}
+.hero-actions {
+  display: flex; gap: 1rem; margin-top: 3rem;
+  opacity: 0; animation: fadeUp 0.8s 0.8s ease forwards;
+}
+.hero-stats {
+  display: flex; gap: 3rem; margin-top: 4rem;
+  padding-top: 3rem; border-top: 1px solid var(--border);
+  opacity: 0; animation: fadeUp 0.8s 1s ease forwards;
+}
+.stat-num {
+  font-family: 'Syne', sans-serif; font-size: 2.2rem;
+  font-weight: 800; color: var(--accent);
+}
+.stat-label { font-size: 0.8rem; color: var(--muted); font-family: 'DM Mono', monospace; letter-spacing: 0.05em; margin-top: 0.2rem; }
+
+/* Responsive */
+@media (max-width: 1024px) { .hero { padding: 7rem 2.5rem 4rem; } }
+@media (max-width: 900px) {
+  .hero-inner { flex-direction: column !important; gap: 2rem; align-items: center; }
+  .hero-photo-wrap { display: flex; justify-content: center; width: 100%; }
+  .hero-photo { width: 280px; height: 280px; }
+  .hero-content { width: 100%; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 5.5rem 1.25rem 3rem; min-height: auto; }
+  .hero-inner { flex-direction: column !important; align-items: center; }
+  h1 { font-size: clamp(2.8rem,12vw,4rem); }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-actions { flex-direction: column; gap: 0.75rem; }
+  .hero-stats { gap: 1.2rem; flex-wrap: wrap; padding-top: 2rem; margin-top: 2.5rem; }
+  .stat-num { font-size: 1.8rem; }
+  .hero-photo { width: 220px !important; height: 220px !important; border-radius: 50% !important; }
+}
+@media (max-width: 480px) {
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; }
+  .hero-photo { width: 180px !important; height: 180px !important; }
+}

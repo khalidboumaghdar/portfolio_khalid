@@ -1,0 +1,38 @@
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-inner">
+    <!-- Photo — right on desktop, top on mobile -->
+    <div class="hero-photo-wrap">
+      <!-- Replace src with your actual photo path: assets/images/khalid.jpg -->
+      <img src="assets/images/khalid.jpg" alt="Khalid Boumaghdar" class="hero-photo">
+      <div class="hero-photo-badge">● #OpenToWork</div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-tag">Available for opportunities</div>
+      <h1>
+        Khalid
+        <span class="line2">Boumaghdar</span>
+      </h1>
+      <p class="hero-sub">
+        Full Stack Developer crafting modern, high-performance web applications.
+        Bridging Java, Angular, Spring Boot, Laravel, and React &mdash; from concept to deployment.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" (click)="scrollTo('projects')">View Projects</a>
+        <a href="#contact"  class="btn-outline"  (click)="scrollTo('contact')">Get in Touch</a>
+      </div>
+
+      <div class="hero-stats">
+        <div *ngFor="let s of stats; let i = index">
+          <div class="stat-num">{{ displayNums[i] || s.num + s.suffix }}</div>
+          <div class="stat-label">{{ s.label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

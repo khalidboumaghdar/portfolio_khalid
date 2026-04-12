@@ -1,0 +1,17 @@
+<section id="experience">
+  <div class="section-label">// where I've been</div>
+  <div class="section-title">Work <span>Experience</span></div>
+
+  <div class="exp-timeline">
+    <div class="exp-item animate-ready" *ngFor="let exp of experiences">
+      <div class="exp-dot"></div>
+      <div class="exp-date">{{ exp.date }}</div>
+      <div class="exp-title">{{ exp.title }}</div>
+      <div class="exp-company">{{ exp.company }}</div>
+      <div class="exp-desc">{{ exp.desc }}</div>
+      <div class="exp-tags">
+        <span class="tag" *ngFor="let tag of exp.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>

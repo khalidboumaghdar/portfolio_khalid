@@ -1,0 +1,12 @@
+<section id="education">
+  <div class="section-label">// my background</div>
+  <div class="section-title">Education &amp; <span>Certifications</span></div>
+
+  <div class="edu-grid">
+    <div class="edu-card" *ngFor="let item of items">
+      <div class="edu-year">{{ item.year }}</div>
+      <div class="edu-degree">{{ item.degree }}</div>
+      <div class="edu-school">{{ item.school }}</div>
+    </div>
+  </div>
+</section>

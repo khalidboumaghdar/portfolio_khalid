@@ -1,0 +1,66 @@
+<section class="projects-bg" id="projects">
+  <div class="section-label">// what I've built</div>
+  <div class="section-title">Featured <span>Projects</span></div>
+
+  <!-- School tabs -->
+  <div class="school-tabs">
+    <button
+      *ngFor="let s of schools"
+      class="school-tab"
+      [class.active]="activeSchool === s.id"
+      (click)="switchSchool(s.id)">
+      <span class="tab-badge">{{ s.badge }}</span>
+      <span class="tab-label">{{ s.label }}</span>
+    </button>
+  </div>
+
+  <!-- Active school panel -->
+  <div class="school-panel" *ngIf="currentSchool">
+    <div class="school-header">
+      <div class="school-logo" [ngClass]="currentSchool.logoClass">{{ currentSchool.logoText }}</div>
+      <div class="school-meta">
+        <div class="school-name">
+          {{ currentSchool.name }}
+          <span class="school-badge">{{ currentSchool.badgeText }}</span>
+        </div>
+        <div class="school-period">{{ currentSchool.period }}</div>
+        <p class="school-desc">{{ currentSchool.desc }}</p>
+      </div>
+    </div>
+
+    <div class="proj-layout">
+      <!-- Project list + detail -->
+      <div class="proj-info">
+        <div class="proj-card-list">
+          <div
+            *ngFor="let proj of currentSchool.projects; let i = index"
+            class="proj-item"
+            [class.active-proj]="currentSchool.activeProject === proj.id"
+            (click)="setActiveProject(currentSchool, proj.id)">
+            <div class="proj-item-num">{{ (i + 1) | number:'2.0-0' }}</div>
+            <div>
+              <div class="proj-item-title">{{ proj.title }}</div>
+              <div class="proj-item-sub">{{ proj.sub }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-detail" *ngIf="activeProject">
+          <div class="proj-detail-title">{{ activeProject.title }}</div>
+          <p>{{ activeProject.desc }}</p>
+          <div class="exp-tags">
+            <span class="tag" *ngFor="let t of activeProject.tags">{{ t }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual placeholder (replace with canvas or image) -->
+      <div class="proj-schema-wrap">
+        <div class="schema-title-label">// architecture</div>
+        <div class="proj-visual-placeholder">
+          <span>{{ currentSchool.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

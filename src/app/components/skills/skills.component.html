@@ -1,0 +1,17 @@
+<section class="skills-bg" id="skills">
+  <div class="section-label">// what I work with</div>
+  <div class="section-title">Technical <span>Stack</span></div>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let card of cards">
+      <div class="skill-icon">{{ card.icon }}</div>
+      <div class="skill-name">{{ card.name }}</div>
+      <div class="skill-list">
+        <span *ngFor="let item of card.items; let i = index"
+              [class.hl]="card.highlights.includes(i)">
+          {{ item }}<br *ngIf="i < card.items.length - 1">
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

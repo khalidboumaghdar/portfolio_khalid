@@ -1,0 +1,63 @@
+<section id="skillmap">
+  <div class="section-label">// proficiency map</div>
+  <div class="section-title">Skills <span>Schema</span></div>
+
+  <div class="schema-wrapper">
+
+    <!-- Bars — Block in Block -->
+    <div class="schema-outer-block">
+      <div class="sob-corner sob-tl"></div>
+      <div class="sob-corner sob-tr"></div>
+      <div class="sob-corner sob-bl"></div>
+      <div class="sob-corner sob-br"></div>
+      <div class="sob-label">01 — bars</div>
+      <div class="sob-inner" #barsContainer>
+        <div class="schema-bars-title">Language &amp; Framework Proficiency</div>
+        <div class="bars-list">
+          <div class="bar-item" *ngFor="let s of skills; let i = index">
+            <div class="bar-meta">
+              <div class="bar-name">
+                <span class="bar-icon">{{ s.icon }}</span>{{ s.name }}
+              </div>
+              <div class="bar-pct">{{ barLabels[i] }}</div>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill"
+                [style.width.%]="barWidths[i]"
+                [style.background]="'linear-gradient(90deg,' + s.color[0] + ',' + s.color[1] + ')'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Map — Block in Block -->
+    <div class="schema-outer-block">
+      <div class="sob-corner sob-tl"></div>
+      <div class="sob-corner sob-tr"></div>
+      <div class="sob-corner sob-bl"></div>
+      <div class="sob-corner sob-br"></div>
+      <div class="sob-label">02 — map</div>
+      <div class="sob-inner canvas-wrap">
+        <div class="schema-bars-title">Tech Ecosystem Map</div>
+        <canvas #techMapCanvas width="480" height="420" style="max-width:100%;height:auto;"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Radar — Block in Block full width -->
+  <div class="schema-outer-block schema-outer-full">
+    <div class="sob-corner sob-tl"></div>
+    <div class="sob-corner sob-tr"></div>
+    <div class="sob-corner sob-bl"></div>
+    <div class="sob-corner sob-br"></div>
+    <div class="sob-label">03 — radar</div>
+    <div class="sob-inner radar-wrap">
+      <div class="schema-bars-title" style="text-align:center;margin-bottom:1.5rem;">Full Stack Capability Radar</div>
+      <canvas #radarCanvas width="500" height="500" style="max-width:100%;height:auto;margin:0 auto;display:block;"></canvas>
+    </div>
+  </div>
+
+</section>

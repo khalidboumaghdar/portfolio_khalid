@@ -1,0 +1,96 @@
+:host { display: block; }
+.projects-bg { background: var(--surface); }
+
+/* ── School tabs ── */
+.school-tabs { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.school-tab {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--muted); padding: 0.6rem 1.2rem; border-radius: 3px;
+  font-family: 'DM Mono', monospace; font-size: 0.8rem;
+  cursor: pointer; transition: all 0.2s; letter-spacing: 0.03em;
+}
+.school-tab:hover { border-color: var(--accent); color: var(--text); }
+.school-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tab-badge {
+  width: 22px; height: 22px; background: rgba(255,255,255,0.15);
+  border-radius: 4px; display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; font-family: 'Syne', sans-serif;
+}
+.school-tab.active .tab-badge { background: rgba(255,255,255,0.25); }
+
+/* ── School panel ── */
+.school-panel { animation: panelIn 0.4s ease; }
+@keyframes panelIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+.school-header {
+  display: flex; gap: 2rem; align-items: flex-start;
+  margin-bottom: 2.5rem; padding: 2rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+}
+.school-logo {
+  width: 64px; height: 64px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem;
+  color: #fff; flex-shrink: 0;
+}
+.s1337-logo   { background: linear-gradient(135deg,#0a0a0f,#333); border: 2px solid #7c5cfc; color: #7c5cfc; }
+.simplon-logo { background: linear-gradient(135deg,#e63946,#c1121f); }
+.ensa-logo    { background: linear-gradient(135deg,#1d3557,#457b9d); }
+.etec-logo    { background: linear-gradient(135deg,#2d6a4f,#52b788); }
+.school-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; margin-bottom: 0.3rem; }
+.school-badge {
+  font-family: 'DM Mono', monospace; font-size: 0.7rem;
+  background: rgba(124,92,252,0.15); border: 1px solid rgba(124,92,252,0.25);
+  color: var(--accent); padding: 0.15rem 0.5rem; border-radius: 2px;
+  vertical-align: middle; margin-left: 0.5rem; letter-spacing: 0.05em;
+}
+.school-period { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent2); margin-bottom: 0.6rem; }
+.school-desc   { color: var(--muted); font-size: 0.88rem; line-height: 1.6; max-width: 500px; }
+
+/* ── Project layout ── */
+.proj-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+.proj-card-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+.proj-item {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 0.9rem 1rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 3px;
+  cursor: pointer; transition: all 0.2s;
+}
+.proj-item:hover { border-color: var(--accent); }
+.proj-item.active-proj { border-color: var(--accent); background: rgba(124,92,252,0.08); }
+.proj-item-num   { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--accent); min-width: 20px; padding-top: 2px; }
+.proj-item-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.15rem; }
+.proj-item-sub   { font-size: 0.78rem; color: var(--muted); }
+
+.proj-detail-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--accent); }
+.proj-detail p     { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1rem; }
+.exp-tags          { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+
+.proj-schema-wrap {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 4px; padding: 1.5rem; min-height: 300px;
+  display: flex; flex-direction: column;
+}
+.schema-title-label {
+  font-family: 'DM Mono', monospace; font-size: 0.7rem;
+  color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase;
+}
+.proj-visual-placeholder {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  border: 1px dashed var(--border); border-radius: 4px;
+  font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800;
+  color: rgba(124,92,252,0.2); letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .proj-layout  { grid-template-columns: 1fr; }
+  .school-header{ flex-direction: column; gap: 1rem; }
+  .school-tabs  { gap: 0.5rem; }
+  .school-tab   { padding: 0.5rem 0.9rem; font-size: 0.75rem; }
+}
+@media (max-width: 480px) {
+  .tab-label  { display: none; }
+  .school-tab { padding: 0.6rem 0.8rem; }
+  .tab-badge  { width: 26px; height: 26px; font-size: 0.85rem; }
+}

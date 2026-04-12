@@ -1,0 +1,41 @@
+<nav>
+  <div class="nav-logo">KB<span>.</span></div>
+
+  <ul class="nav-links">
+    <li><a href="#about"      (click)="scrollTo('about')">about</a></li>
+    <li><a href="#skills"     (click)="scrollTo('skills')">skills</a></li>
+    <li><a href="#experience" (click)="scrollTo('experience')">experience</a></li>
+    <li><a href="#projects"   (click)="scrollTo('projects')">projects</a></li>
+    <li><a href="#education"  (click)="scrollTo('education')">education</a></li>
+    <li><a href="#contact"    (click)="scrollTo('contact')">contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <!-- Theme toggle -->
+    <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+      <div class="theme-toggle-track-icons"><span>🌙</span><span>☀️</span></div>
+      <div class="theme-toggle-thumb">
+        <span>{{ themeService.isLight ? '☀️' : '🌙' }}</span>
+      </div>
+    </button>
+
+    <button class="nav-cta" (click)="scrollTo('contact')">hire me</button>
+
+    <!-- Hamburger -->
+    <button class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mobile-menu" [class.open]="menuOpen">
+  <ul>
+    <li><a href="#skills"     (click)="scrollTo('skills')">skills</a></li>
+    <li><a href="#experience" (click)="scrollTo('experience')">experience</a></li>
+    <li><a href="#projects"   (click)="scrollTo('projects')">projects</a></li>
+    <li><a href="#education"  (click)="scrollTo('education')">education</a></li>
+    <li><a href="#contact"    (click)="scrollTo('contact')">contact</a></li>
+    <li><a href="#contact"    (click)="scrollTo('contact')" class="mobile-hire">hire me →</a></li>
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+<section id="about">
+  <div class="section-label">// who I am</div>
+  <div class="section-title">About <span>Me</span></div>
+
+  <div class="about-wrap">
+    <div class="about-img-side">
+      <!-- Replace with assets/images/khalid.jpg -->
+      <img src="assets/images/khalid.jpg" alt="Khalid Boumaghdar" class="about-photo">
+      <div class="about-photo-decor"></div>
+    </div>
+
+    <div class="about-text">
+      <h3>Passionate developer building <span>meaningful</span> digital experiences</h3>
+      <p>
+        Hi, I'm <strong>Khalid Boumaghdar</strong> — a Full Stack Developer based in Morocco,
+        currently studying Software Engineering at <strong>1337 Rabat</strong> (part of the global 42 Network).
+        I'm deeply passionate about clean code, elegant architecture, and turning complex problems
+        into simple, beautiful solutions.
+      </p>
+      <p>
+        My journey started with a technical degree at ETEC Fès, followed by a Software Engineering
+        licence at ENSA Fès, a Full Stack Java/Angular certification at Simplon, and now peer-to-peer
+        engineering at 1337. Each step has sharpened both my technical depth and collaborative mindset.
+      </p>
+      <p>
+        I've shipped real-world projects from pharmacy management ERPs and e-commerce platforms to
+        email marketing infrastructure — always focusing on performance, UX, and clean code. I'm actively
+        <strong class="open">#OpenToWork</strong> and eager to join a team where I can grow and contribute.
+      </p>
+
+      <div class="about-highlights">
+        <div class="about-highlight-item" *ngFor="let item of highlights">{{ item }}</div>
+      </div>
+    </div>
+  </div>
+</section>

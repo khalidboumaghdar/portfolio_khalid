@@ -1,0 +1,22 @@
+:host { display: block; }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px; padding: 2rem;
+  transition: all 0.3s;
+}
+.edu-card:hover { border-color: rgba(0,229,195,0.4); transform: translateY(-3px); }
+.edu-year   { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent2); margin-bottom: 0.8rem; }
+.edu-degree { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.4rem; }
+.edu-school { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+  .edu-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .edu-card { padding: 1.5rem; }
+}
