@@ -11,8 +11,11 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .logo_link{
-  color: black;
+  color: var(--accent) ;
   text-decoration: none;
+}
+.sp{
+  color: white;
 }
 .nav-logo {
   font-family: 'Syne', sans-serif;

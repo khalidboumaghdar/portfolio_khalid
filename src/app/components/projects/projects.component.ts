@@ -6,6 +6,9 @@ export interface Project {
   sub: string;
   desc: string;
   tags: string[];
+  github?: string;   // ← NEW
+  demo?: string;     // ← NEW
+  image?: string;    // ← NEW  (put screenshots in: src/assets/projects/xxx.png)
 }
 
 export interface School {
@@ -39,15 +42,36 @@ export class ProjectsComponent {
       desc: 'Part of the global 42 network — a peer-to-peer, project-based engineering school with no teachers and no classes. Pure problem-solving through code.',
       activeProject: 'p1337_1',
       projects: [
-        { id: 'p1337_1', title: 'libft — C Standard Library', sub: 'Reimplementing libc from scratch in C',
+        {
+          id: 'p1337_1',
+          title: 'libft — C Standard Library',
+          sub: 'Reimplementing libc from scratch in C',
           desc: 'Full reimplementation of the C standard library (40+ functions) from scratch without using any standard functions. Covers string manipulation, memory management, linked lists, and more.',
-          tags: ['C', 'Makefile', 'Pointers', 'Memory'] },
-        { id: 'p1337_2', title: 'ft_printf', sub: 'Custom printf with full format support',
+          tags: ['C', 'Makefile', 'Pointers', 'Memory'],
+          github: 'https://github.com/yourname/libft',
+          demo: '',
+          image: 'assets/projects/libft.png',
+        },
+        {
+          id: 'p1337_2',
+          title: 'ft_printf',
+          sub: 'Custom printf with full format support',
           desc: 'A complete reimplementation of printf() handling %c, %s, %d, %i, %u, %x, %X, %p and %% with full flag, width, and precision support.',
-          tags: ['C', 'Variadic', 'Formatting'] },
-        { id: 'p1337_3', title: 'get_next_line', sub: 'File descriptor reader, line by line',
+          tags: ['C', 'Variadic', 'Formatting'],
+          github: 'https://github.com/yourname/ft_printf',
+          demo: '',
+          image: 'assets/projects/ft_printf.png',
+        },
+        {
+          id: 'p1337_3',
+          title: 'get_next_line',
+          sub: 'File descriptor reader, line by line',
           desc: 'Reads a file descriptor one line at a time with static buffers. Handles multiple file descriptors simultaneously with any buffer size.',
-          tags: ['C', 'File I/O', 'Static vars'] },
+          tags: ['C', 'File I/O', 'Static vars'],
+          github: 'https://github.com/yourname/get_next_line',
+          demo: '',
+          image: 'assets/projects/gnl.png',
+        },
       ],
     },
     {
@@ -58,9 +82,16 @@ export class ProjectsComponent {
       desc: 'Professional certification program focused on enterprise Java development with Spring Boot backend and Angular frontend, following Agile/Scrum methodology.',
       activeProject: 'psimp_1',
       projects: [
-        { id: 'psimp_1', title: 'Pharmacy Management System', sub: 'Full Stack ERP — Final year project',
+        {
+          id: 'psimp_1',
+          title: 'Pharmacy Management System',
+          sub: 'Full Stack ERP — Final year project',
           desc: 'Complete pharmacy ERP with drug inventory, stock alerts, prescription tracking, and sales analytics. Secured with JWT authentication and role-based access (pharmacist / assistant).',
-          tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'JWT', 'Figma'] },
+          tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'JWT', 'Figma'],
+          github: 'https://github.com/yourname/pharmacy-erp',
+          demo: 'https://pharmacy-demo.yourapp.dev',
+          image: 'assets/projects/pharmacy.png',
+        },
       ],
     },
     {
@@ -71,12 +102,26 @@ export class ProjectsComponent {
       desc: 'National School of Applied Sciences — Bachelor in Software Engineering with a focus on web development, databases, software architecture, and project management.',
       activeProject: 'pensa_1',
       projects: [
-        { id: 'pensa_1', title: 'E-Commerce Platform', sub: 'Capstone project — React + Laravel',
+        {
+          id: 'pensa_1',
+          title: 'E-Commerce Platform',
+          sub: 'Capstone project — React + Laravel',
           desc: 'Full-stack e-commerce app with product catalog, stock management, order tracking, and admin dashboard. Built with React.js frontend and Laravel 10 REST API backend.',
-          tags: ['React.js', 'Laravel 10', 'PHP', 'MySQL', 'Bootstrap'] },
-        { id: 'pensa_2', title: 'Attendance Web App', sub: 'Internship — Agence Urbaine de Fès',
+          tags: ['React.js', 'Laravel 10', 'PHP', 'MySQL', 'Bootstrap'],
+          github: 'https://github.com/yourname/ecommerce',
+          demo: 'https://ecommerce-demo.yourapp.dev',
+          image: 'assets/projects/ecommerce.png',
+        },
+        {
+          id: 'pensa_2',
+          title: 'Attendance Web App',
+          sub: 'Internship — Agence Urbaine de Fès',
           desc: 'Staff attendance tracking system for the Urban Agency of Fès. Designed UML architecture, created Figma mockups, and built the full app using Laravel with Postman-tested REST APIs.',
-          tags: ['Laravel', 'MySQL', 'UML', 'Figma', 'Postman'] },
+          tags: ['Laravel', 'MySQL', 'UML', 'Figma', 'Postman'],
+          github: 'https://github.com/yourname/attendance-app',
+          demo: '',
+          image: 'assets/projects/attendance.png',
+        },
       ],
     },
     {
@@ -87,12 +132,26 @@ export class ProjectsComponent {
       desc: 'Specialized technician diploma in computer development. Foundational training in web development, databases, programming logic, and software development lifecycle.',
       activeProject: 'petec_1',
       projects: [
-        { id: 'petec_1', title: 'Email Campaign Tool', sub: 'Internal tool — E-SEND SOLUTION',
+        {
+          id: 'petec_1',
+          title: 'Email Campaign Tool',
+          sub: 'Internal tool — E-SEND SOLUTION',
           desc: 'Internal marketing management platform handling campaign creation, scheduling, sending (1,000/min), and performance analytics. Generated $2,000+ in revenue.',
-          tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'] },
-        { id: 'petec_2', title: 'C# AutoLogin App', sub: 'Desktop automation — E-SEND',
+          tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+          github: 'https://github.com/yourname/email-campaign',
+          demo: '',
+          image: 'assets/projects/email-campaign.png',
+        },
+        {
+          id: 'petec_2',
+          title: 'C# AutoLogin App',
+          sub: 'Desktop automation — E-SEND',
           desc: 'Windows desktop application that automates email account login via providers. Configured mail servers and optimized the sending pipeline, reducing manual work for marketing teams.',
-          tags: ['C#', '.NET', 'Windows Forms', 'Automation'] },
+          tags: ['C#', '.NET', 'Windows Forms', 'Automation'],
+          github: 'https://github.com/yourname/autologin',
+          demo: '',
+          image: 'assets/projects/autologin.png',
+        },
       ],
     },
   ];
@@ -112,5 +171,10 @@ export class ProjectsComponent {
 
   setActiveProject(school: School, projectId: string): void {
     school.activeProject = projectId;
+  }
+
+  /** Hide broken <img> tags gracefully */
+  onImgError(event: Event): void {
+    (event.target as HTMLImageElement).style.display = 'none';
   }
 }
