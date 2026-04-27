@@ -30,13 +30,6 @@ export class ExperienceComponent {
       tags: ['React.js', 'Laravel 10', 'PHP', 'MySQL', 'Bootstrap'],
     },
     {
-      date: 'Oct 2023 – Oct 2024',
-      title: 'Messaging Agent & Internal Developer',
-      company: 'E-SEND SOLUTION SARL AU · Fès',
-      desc: 'Managed email marketing campaigns at scale (up to 1,000 emails/min). Developed internal tools with Laravel for campaign management, configured mail servers, and built a C# autologin desktop app. Generated $2,000+ in revenue through optimized campaigns.',
-      tags: ['Laravel', 'C#', 'PHP', 'Server Admin', 'Email Marketing'],
-    },
-    {
       date: 'Avril 2023',
       title: 'Web Developer Intern',
       company: 'Agence Urbaine de Fès',
