@@ -9,7 +9,7 @@ export class HeroComponent implements AfterViewInit {
   stats = [
     { num: 3,  suffix: '+', label: 'Years Coding' },
     { num: 5,  suffix: '+', label: 'Projects Shipped' },
-    { num: 10, suffix: '+', label: 'Technologies' },
+    { num: 5, suffix: '+', label: 'Technologies' },
     { num: 3,  suffix: '',  label: 'Certifications' },
   ];
 

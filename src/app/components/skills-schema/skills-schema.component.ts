@@ -18,13 +18,12 @@ export class SkillsSchemaComponent implements AfterViewInit, OnDestroy {
   skills: Skill[] = [
     { name: 'HTML / CSS',    icon: '🌐', pct: 95, color: ['#ff6b35','#f7931e'] },
     { name: 'JavaScript',   icon: '⚡', pct: 82, color: ['#f7df1e','#f0a500'] },
-    { name: 'PHP / Laravel', icon: '🐘', pct: 85, color: ['#7c5cfc','#9b6dff'] },
-    { name: 'Java / Spring', icon: '☕', pct: 78, color: ['#00e5c3','#00b89c'] },
+    { name: 'PHP / Laravel', icon: '🐘', pct: 50, color: ['#7c5cfc','#9b6dff'] },
+    { name: 'Java / Spring', icon: '☕', pct: 90, color: ['#00e5c3','#00b89c'] },
+    { name: 'Python', icon: 'PY', pct: 100, color: ['#00e5c3','#00b89c'] },
     { name: 'TypeScript',   icon: '📘', pct: 74, color: ['#3178c6','#5ba4f5'] },
     { name: 'Angular',      icon: '🔺', pct: 76, color: ['#dd0031','#ff4468'] },
-    { name: 'React.js',     icon: '⚛️', pct: 70, color: ['#61dafb','#21a9c4'] },
-    { name: 'C# / .NET',    icon: '🪟', pct: 60, color: ['#9b4dca','#c678dd'] },
-    { name: 'MySQL / SQL',  icon: '🗄️', pct: 88, color: ['#00e5c3','#7c5cfc'] },
+    { name: 'MySQL / SQL',  icon: '🗄️', pct: 90, color: ['#00e5c3','#7c5cfc'] },
   ];
 
   barWidths: number[]  = [];
@@ -43,13 +42,12 @@ export class SkillsSchemaComponent implements AfterViewInit, OnDestroy {
   private nodes: Node[] = [
     { x:240, y:210, r:48, label:'Khalid',     color:'#7c5cfc', textColor:'#fff', core:true },
     { x:90,  y:90,  r:34, label:'Angular',    color:'#dd0031', textColor:'#fff' },
-    { x:200, y:60,  r:30, label:'React',      color:'#61dafb', textColor:'#0a0a0f' },
+    { x:200, y:60,  r:30, label:'Python',      color:'#61dafb', textColor:'#0a0a0f' },
     { x:320, y:55,  r:28, label:'TypeScript', color:'#3178c6', textColor:'#fff' },
     { x:420, y:100, r:26, label:'Bootstrap',  color:'#7952b3', textColor:'#fff' },
     { x:60,  y:200, r:27, label:'HTML/CSS',   color:'#ff6b35', textColor:'#fff' },
     { x:100, y:330, r:34, label:'Laravel',    color:'#ff2d20', textColor:'#fff' },
     { x:220, y:370, r:32, label:'Spring Boot',color:'#6db33f', textColor:'#fff' },
-    { x:360, y:350, r:27, label:'ASP.NET',    color:'#512bd4', textColor:'#fff' },
     { x:430, y:240, r:28, label:'Java',       color:'#f89820', textColor:'#0a0a0f' },
     { x:390, y:160, r:26, label:'PHP',        color:'#9b6dff', textColor:'#fff' },
     { x:60,  y:290, r:24, label:'MySQL',      color:'#00e5c3', textColor:'#0a0a0f' },

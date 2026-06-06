@@ -16,25 +16,33 @@ export interface Experience {
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
-      date: 'Sept – Oct 2025',
-      title: 'Full Stack Developer — Pharmacy App',
-      company: 'Final Year Project · Simplon / École Numérique Ahmed Al Hansali',
-      desc: 'Built a complete pharmacy management system with secure user roles (pharmacist, assistant), drug inventory, sales tracking, and prescription management. Designed the full UI/UX in Figma and implemented it with Angular + Spring Boot.',
-      tags: ['Angular', 'Spring Boot', 'Java', 'MySQL', 'Figma', 'TypeScript'],
+      date: '2026 – Present',
+      title: 'call_me_maybe',
+      company: '1337 School · 42 Network — Python Track',
+      desc: 'Function calling system built on Qwen3-0.6B LLM. Implements constrained decoding — guides the model token-by-token to guarantee 100% valid JSON output from natural language prompts into structured function calls with typed arguments. Pydantic validation, mypy typed.',
+      tags: ['Python', 'LLM', 'Constrained Decoding', 'Pydantic', 'JSON', 'NLP'],
     },
     {
-      date: 'Août – Sept 2024',
-      title: 'Full Stack Developer — E-Commerce App',
-      company: 'Licence Capstone Project · ENSA Fès',
-      desc: 'Developed an e-commerce platform with product catalog, stock management, and order processing. Built responsive front-end with React.js and robust back-end API with Laravel 10.',
-      tags: ['React.js', 'Laravel 10', 'PHP', 'MySQL', 'Bootstrap'],
+      date: '2025',
+      title: 'DeliveryMatch',
+      company: 'ENAA / Simplon — Spring Boot + Angular',
+      desc: 'Full-stack collaborative co-transport platform connecting drivers and senders. Spring Boot REST API with JWT security, Spring Data JPA, MySQL, Docker; Angular 16 frontend with Chart.js analytics dashboard. Three roles: sender, driver, admin.',
+      tags: ['Spring Boot', 'Spring Security', 'JWT', 'Angular', 'Docker', 'MySQL'],
     },
     {
-      date: 'Avril 2023',
-      title: 'Web Developer Intern',
-      company: 'Agence Urbaine de Fès',
-      desc: 'Built an attendance management web application. Designed UML diagrams (use case, class, sequence), created UI/UX wireframes in Figma, and implemented the full stack using Laravel + MySQL with Bootstrap front-end. Tested APIs with Postman.',
-      tags: ['Laravel', 'PHP', 'MySQL', 'Figma', 'UML', 'Postman'],
+      date: '2025',
+      title: 'JobConnect',
+      company: 'ENAA / Simplon — Java EE / MVC',
+      desc: 'Full recruitment web platform with three roles: candidate, recruiter, and admin. MVC + DAO architecture, session-based authentication, application status tracking (accepted / refused / pending). Maven build, Bootstrap UI, deployed on Apache Tomcat.',
+      tags: ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL', 'Maven', 'MVC'],
     },
+    {
+      date: '2024',
+      title: 'ALX Files Manager',
+      company: 'ALX Africa — Node.js Capstone',
+      desc: 'Capstone project: file upload and management REST API built with Node.js and Express. Token-based authentication, background workers with Bull queue, Redis caching, MongoDB file storage. Covers full backend engineering lifecycle.',
+      tags: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Bull', 'REST API'],
+    },
+   
   ];
 }

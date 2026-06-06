@@ -16,12 +16,12 @@ export class SkillsComponent {
   cards: SkillCard[] = [
     {
       icon: '⚡', name: 'Frontend',
-      items: ['HTML5 · CSS3 · JavaScript', 'Angular · React.js · TypeScript', 'Bootstrap · Figma (UI/UX)'],
+      items: ['HTML5 · CSS3 · JavaScript', 'Angular · TypeScript', 'Bootstrap · Figma (UI/UX)'],
       highlights: [0]
     },
     {
       icon: '🔧', name: 'Backend',
-      items: ['Spring Boot (Java) · Laravel', 'PHP · ASP.NET Core · C#', 'RESTful APIs · Design Patterns'],
+      items: ['Spring Boot (Java) · Laravel', 'PHP','PYTHON', 'RESTful APIs · Design Patterns'],
       highlights: [0]
     },
     {
@@ -31,7 +31,7 @@ export class SkillsComponent {
     },
     {
       icon: '🛠️', name: 'Tools & Methods',
-      items: ['Git · GitHub · Postman', 'Agile · Scrum · UML', 'Linux · Server Administration'],
+      items: ['Git · GitHub · Postman . Docker', 'Agile · Scrum · UML', 'Linux · Server Administration'],
       highlights: [0]
     },
     {

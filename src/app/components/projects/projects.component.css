@@ -8,7 +8,16 @@
   border-bottom: 1px solid var(--border);
   padding-bottom: 0;
 }
-
+.logo-ensa {
+  background: rgba(251,146,60,0.12);
+  color: #fb923c;
+  border: 1px solid rgba(251,146,60,0.25);
+}
+.logo-alx {
+  background: rgba(239,68,68,0.12);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,0.25);
+}
 .cat-tab {
   display: inline-flex;
   align-items: center;
