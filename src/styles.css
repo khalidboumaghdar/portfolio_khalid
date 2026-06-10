@@ -38,9 +38,11 @@ body {
   transition: background 0.4s ease, color 0.4s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body { cursor: auto; }
   a, button { cursor: pointer; }
+  .cursor,
+  .cursor-ring { display: none !important; }
 }
 
 /* ── Scrollbar ── */
