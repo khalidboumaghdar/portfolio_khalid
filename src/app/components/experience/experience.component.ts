@@ -30,9 +30,9 @@ export class ExperienceComponent {
       tags: ['Spring Boot', 'Spring Security', 'JWT', 'Angular', 'Docker', 'MySQL'],
     },
     {
-      date: '2025',
+      date: '2024',
       title: 'JobConnect',
-      company: 'ENAA / Simplon — Java EE / MVC',
+      company: 'Projet de fin d\'études · ENSA Fès',
       desc: 'Full recruitment web platform with three roles: candidate, recruiter, and admin. MVC + DAO architecture, session-based authentication, application status tracking (accepted / refused / pending). Maven build, Bootstrap UI, deployed on Apache Tomcat.',
       tags: ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL', 'Maven', 'MVC'],
     },

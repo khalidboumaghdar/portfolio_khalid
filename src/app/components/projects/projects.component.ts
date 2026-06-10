@@ -18,6 +18,8 @@ export interface FreelanceProject {
   iconClass: string; year: string; featured?: boolean;
   stat?: string; statLabel?: string;
   github?: string; demo?: string;
+  link?: string; linkLabel?: string;
+
 }
 
 @Component({
@@ -251,14 +253,6 @@ export class ProjectsComponent {
       github: 'https://github.com/khalidboumaghdar/Enaa_DoctorRV',
     },
     {
-      id: 'jobconnect',
-      title: 'JobConnect',
-      sub: 'Recruitment platform — JEE / MVC',
-      desc: 'A full recruitment web platform built with Java EE following MVC + DAO architecture. Candidates can apply to job offers; recruiters can manage listings and track application statuses (accepted, refused, pending) with role-based access control.',
-      tags: ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL', 'Maven', 'Bootstrap', 'MVC'],
-      github: 'https://github.com/khalidboumaghdar/JobConnect',
-    },
-    {
       id: 'sportflow',
       title: 'SportFlow',
       sub: 'Sports club management — JEE / MVC',
@@ -431,12 +425,12 @@ export class ProjectsComponent {
   activeProject: 'mymenu',
   projects: [
     {
-      id: 'mymenu',
-      title: 'My Menu',
-      sub: 'Android menu app — SQLite',
-      desc: 'A native Android application for managing a restaurant-style menu. Uses SQLite for local data persistence to store, retrieve, update and delete menu items — built with Java and the Android SDK (Gradle/Kotlin DSL).',
-      tags: ['Java', 'Android', 'SQLite', 'Android SDK', 'Gradle'],
-      github: 'https://github.com/khalidboumaghdar/My-menu-Sqlite-Android-app',
+      id: 'jobconnect',
+      title: 'JobConnect',
+      sub: 'Recruitment platform — JEE / MVC',
+      desc: 'A full recruitment web platform built with Java EE following MVC + DAO architecture. Candidates can apply to job offers; recruiters can manage listings and track application statuses (accepted, refused, pending) with role-based access control.',
+      tags: ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL', 'Maven', 'Bootstrap', 'MVC'],
+      github: 'https://github.com/mohamed-iaazi/JobConnect',
     },
   ],
 },
@@ -444,15 +438,15 @@ export class ProjectsComponent {
 
   freelanceProjects: FreelanceProject[] = [
     {
-      title: 'Email Campaign Tool',
-      sub: 'E-SEND SOLUTION — Internal SaaS',
-      desc: 'Marketing platform for campaign creation, scheduling & sending at 1,000 emails/min with performance analytics.',
-      tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
-      type: 'tool', iconClass: 'icon-purple',
-      year: '2022', featured: true,
-      stat: '$2K+', statLabel: 'revenue generated',
-      github: 'https://github.com/yourname/email-campaign',
-    }
+  title: 'Aura Store',
+  sub: 'AURA212.MA — E-commerce Store',
+  desc: 'Online store for electronics & gadgets (earphones, smart watches, cameras) built with WordPress & WooCommerce, serving customers across Morocco.',
+  tags: ['WordPress', 'WooCommerce', 'Elementor', 'PHP', 'MySQL'],
+  type: 'web', iconClass: 'icon-blue',
+  year: '2026', featured: true,
+  stat: '12+', statLabel: 'products listed',
+  link: 'https://aura212.ma/',
+}
     /* add more freelance/personal projects here */
   ];
 
