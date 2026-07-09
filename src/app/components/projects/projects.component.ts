@@ -446,8 +446,17 @@ export class ProjectsComponent {
   year: '2026', featured: true,
   stat: '12+', statLabel: 'products listed',
   link: 'https://aura212.ma/',
+},
+{
+  title: 'Zero Sugar',
+  sub: 'ZEROSUGAR.MA — Healthy Food Delivery',
+  desc: 'Online ordering platform for a healthy fast-food brand in Fès — combos, salads, bowls, shakes, and detox juices, with a full menu catalog and cart/checkout flow. Built with a Laravel REST API backend and an Angular frontend, delivery-only.',
+  tags: ['Angular', 'TypeScript', 'Laravel', 'PHP', 'MySQL', 'REST API'],
+  type: 'web', iconClass: 'icon-green',
+  year: '2026', featured: true,
+  stat: '11', statLabel: 'menu categories',
+  link: 'https://zerosugar.ma/',
 }
-    /* add more freelance/personal projects here */
   ];
 
   get currentSchool(): School {
